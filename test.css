@@ -1,0 +1,35 @@
+div {
+    position: absolute;
+    top: 0;
+    border: 2px solid black;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    background-color:  #fffeba;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 15px 15px 15px 15px;
+    }
+
+textarea {
+    background-color: transparent;
+    border: transparent;
+    font-size: 19px;
+    font-family:sans-serif;
+    }
+
+::selection {
+    background-color: #2196F3;
+    }
+
+.Icon {
+    margin: 0.5%;
+    height: 3%;
+    width: 3%;
+}
+
+.Icon:hover {
+    height: 3.2%;
+    width: 3.2%;
+    filter: contrast(170%);
+}
