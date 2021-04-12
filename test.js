@@ -129,7 +129,7 @@ function activateDraw()
     {
         drawactivate = 1;
     }
-    console.log(drawactivate)
+    console.log(drawactivate);
 }
 
 //drawing function
@@ -152,6 +152,24 @@ function draw(e) {
   }
 }
 
+//Turn on / off folder overlay
+var folderactive = 0;
+document.getElementById("overlay").style.display = "none";
+function folderActive()
+{
+    if(folderactive == 1)
+    {
+        document.getElementById("overlay").style.display = "block";
+        folderactive = 0;
+    }
+    else
+    {
+        document.getElementById("overlay").style.display = "none";
+        folderactive = 1;
+    }
+    console.log(folderactive);
+}
+
 //Create new note
 //Check divlengt and create note with new Div id number
 //Add text area
@@ -160,6 +178,7 @@ function createNote() {
     var divnum = divs.length + 1;
     const newNote = document.createElement("div");
     newNote.setAttribute("id", divnum);
+    newNote.setAttribute("class", "note")
     const newText = document.createElement("textarea");
     newNote.appendChild(newText)
     const currentDiv = document.getElementById("mydivheader");

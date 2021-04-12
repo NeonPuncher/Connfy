@@ -1,15 +1,36 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(Icons/Montserrat-SemiBold.otf);
+}
+
+h2 {
+    font-family: "Montserrat";
+}
+
+h3 {
+    font-family: "Montserrat";
+}
+
+h4 {
+    font-family: "Montserrat";
+    color: #e7a037;
+    font-size: 100%;
+}
+
 div {
     position: absolute;
     top: 0;
-    border: 2px solid black;
-    padding: 10px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 15px 15px 15px 15px;
+    }
+
+.note {
     width: fit-content;
     height: fit-content;
     background-color:  #fffeba;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 15px 15px 15px 15px;
-    }
+    padding: 10px;
+}
 
 textarea {
     background-color: transparent;
@@ -28,8 +49,67 @@ textarea {
     width: 3%;
 }
 
+.folder:hover {
+    transition: 0.3s;
+    filter: brightness(80%);
+}
+
+.folderIcon {
+    height: 30%;
+    width: 30%;
+}
+
+.folderIconText {
+    border: 2px solid black;
+}
+
 .Icon:hover {
     height: 3.2%;
     width: 3.2%;
     filter: contrast(170%);
+}
+
+.overlay {
+    position: fixed;
+    top:20%;
+    left: 45%;
+    width: 400px;
+    line-height: 200px;
+    height: 75%;
+    margin-left: -150px;
+    margin-top: -100px;
+    background-color: #e3e3e3;
+}
+
+.overlayHeader {
+    border: 2px solid black;
+    position: relative;
+    margin-top: 0px;
+    padding-bottom: 20px;
+    height: 40px;
+    background-color: #63aed9;
+    color: white;
+}
+
+.folderContent {
+    margin-top: 5%;
+    padding: 10px;
+    position: relative;
+    overflow: auto;
+    height: 78%;
+}
+
+.folderContentHeader {
+    border: 10px solid #e7a037;
+    position: relative;
+    float: left;
+    margin-left: 10%;
+}
+
+.folderContentNote {
+    margin: 20px;
+    padding: 20px;
+    position: relative;
+    height: fit-content;
+    background-color:  #fffeba;
 }

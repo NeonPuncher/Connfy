@@ -5,15 +5,32 @@
     </head>
     <body onload="LoadDivs()" style="overflow-x: hidden; position: relative;">
         <canvas id="canvas" class="canvas"></canvas>
-        <div id="div1"><textarea>Select text in this field</textarea></div>
-        <div id="div2"><textarea>Select text in this field</textarea></div>
-        <div id="div3"><textarea id="myArea">Select all this text in this field</textarea></div>
-        <div id="div4">
+        <div class="overlay" id="overlay">
+            <div class="overlayHeader"><h2>Folder 1:</h2></div>
+            <div class="folderContent">
+                <h4>Note 1:</h4>
+                <p class="folderContentNote">Epic veel tekst waar veel in gaat staan uiteindelijk omdat ik zenuwachtig ben en niet weet wat ik hier moet gaan zetten.</p>
+                <h4>Note 2:</h4>
+                <p class="folderContentNote">Epic veel tekst waar veel in gaat staan uiteindelijk omdat ik zenuwachtig ben en niet weet wat ik hier moet gaan zetten.</p>
+                <h4>Picture 1:</h4>
+                <img src="Icons/FeatureMatrix.png" style="width: 100%;">
+                <h4>Note 3:</h4>
+                <p class="folderContentNote">Epic veel tekst waar veel in gaat staan uiteindelijk omdat ik zenuwachtig ben en niet weet wat ik hier moet gaan zetten.</p>
+            </div>
+        </div>
+        <div id="div1" class="note"><textarea>Select text in this field</textarea></div>
+        <div id="div2" class="note"><textarea>Select text in this field</textarea></div>
+        <div id="div3" class="note"><textarea id="myArea">Select all this text in this field</textarea></div>
+        <div id="div4" class="note">
             <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
             <p><img id="output" width="300px" /></p>
         </div>
-        <div id="div5"><textarea id="myArea">Mark this text</textarea></div>
-        <div id="mydivheader"><p>Marked text:</p></div>
+        <div id="div5" class="note"><textarea id="myArea">Mark this text</textarea></div>
+        <div id="div6" class="folder" onclick="folderActive()">
+            <img src="Icons/FolderIcon.png" class="folderIcon">
+            <h3>Folder</h3>
+        </div>
+        <div id="mydivheader" class="note"><h3>Marked Text:</h3></div>
 
         <img src="Icons/NoteIcon.png" class="Icon" onclick="createNote (); LoadDivs()">
         <img src="Icons/DrawIcon.png" class="Icon" onclick="activateDraw ()">
