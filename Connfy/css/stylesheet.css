@@ -1,36 +1,16 @@
 @font-face {
-    font-family: 'montserratlight';
-    src: url('montserrat-light.woff2') format('woff2'),
-         url('montserrat-light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: custom;
+  src:url(../Montserrat-Regular.ttf);
 }
 @font-face {
-    font-family: 'montserratregular';
-    src: url('montserrat-regular.woff2') format('woff2'),
-         url('montserrat-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'montserratsemibold';
-    src: url('montserrat-semibold.woff2') format('woff2'),
-         url('montserrat-semibold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'robotoregular';
-    src: url('roboto-regular.woff2') format('woff2'),
-         url('roboto-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: Roboto;
+  src: url(../Roboto-Regular.ttf);
 }
 
+p{
+  font-family: custom;
+  font-weight: 300;
+}
 
 /* Variables */
 :root {
@@ -69,6 +49,7 @@ footer {
   font-size: 0.85em;
 }
 h1 {
+  
   font-size: 1.5em;
   margin: 0px 0px 15px 0px;
 }
