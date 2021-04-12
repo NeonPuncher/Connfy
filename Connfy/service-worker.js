@@ -5,7 +5,8 @@ const appFiles=[
 	"js/script.js",
 	"css/stylesheet.css",
 	"images/icon-512.png",
-  "images/icon-192.png"
+  "images/icon-192.png",
+  "images/Arrow-left.png"
 ];
 
 self.addEventListener("install",(installing)=>{
