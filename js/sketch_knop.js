@@ -1,14 +1,9 @@
 const lang = navigator.language || 'nl-NL' //Stel taal waarop hij moet focusen in
 const myRec = new p5.SpeechRec(lang) // nieuwe P5.SpeechRec object aanmaken
-let button;
+let button
 
 function setup()
 {
-	// Doet de graphische dingen:
-	createCanvas(400, 400)
-	background(255, 255, 255)
-	fill(0, 0, 0, 255)
-	
 	// Geef instructies hoe het eruit moet komen te zien:
 	textSize(20)
 	textAlign(CENTER)
@@ -39,4 +34,3 @@ function showResult()
 
 //Laad dit bestand zodra de window opstart
 window.setup = setup
-
