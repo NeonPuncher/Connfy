@@ -115,3 +115,27 @@ h2{
   font-weight: 400;
   color: #414042;
 }
+
+#spacing{
+  margin-top: 20%;
+}
+
+@media only screen and (min-width: 600px) {
+  .logo {
+    margin: 20px auto 20px auto;
+  }
+
+  #spacing{
+    margin-top: 20px;
+  }
+
+  form{
+    width: 30%;
+    justify-self: center;
+  }
+  
+  .submit{
+    margin: 50px;
+  }
+
+}
