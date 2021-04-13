@@ -1,44 +1,56 @@
 <!DOCTYPE html>
-<html style="background-color: #6e9fbc;">
+<html style="background-color: #6e9fbc">
+  <head>
+    <link rel="manifest" href="manifest.json" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Connfy PWA</title>
 
-<head>
-  <link rel="manifest" href="manifest.json">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Connfy PWA</title>
-  
-  <link rel="stylesheet" href="../css/stylesheet.css" type="text/css">
- 
-</head>
+    <link rel="stylesheet" href="../css/stylesheet.css" type="text/css" />
+  </head>
 
-<body>
-  <div class="header">
-    <header>
-      <img class="arrow" src="../images/Arrow-left.png"> 
-      <div class="line"></div>
-    </header>
-  </div>
+  <body>
+    <div class="header">
+      <header>
+        <img class="arrow" src="../images/Arrow-left.png" />
+        <div class="line"></div>
+      </header>
+    </div>
 
-  <div class="content">
-  <img class="logo" src="/images/Connfy.png">
-  
+    <div class="content">
+      <img class="logo" src="/images/Connfy.png" />
 
-  <form action="" method="POST">
-    <h2 style="font-weight: 400; margin-top: 20%;">Gebruikersnaam:</h2>
-    <input class="input" type="text" name="username" placeholder="Gebruikersnaam"><br>
-    <h2 style="font-weight: 400;">Wachtwoord:</h2>
-      <input class="input" type="password" name="pass" placeholder="Wachtwoord"/> <br>
+      <form action="" method="POST">
+        <h2 id="spacing" style="font-weight: 400">Gebruikersnaam:</h2>
+        <input
+          class="input"
+          type="text"
+          name="username"
+          placeholder="Gebruikersnaam"
+        /><br />
+        <h2 style="font-weight: 400">Wachtwoord:</h2>
+        <input
+          class="input"
+          type="password"
+          name="pass"
+          placeholder="Wachtwoord"
+        />
+        <br />
 
-      <input class="submit" type="submit" value="Verder" name="submit" required>
+        <input
+          class="submit"
+          type="submit"
+          value="Verder"
+          name="submit"
+          required
+        />
+      </form>
+    </div>
 
-    </form>
-
-
-
-</div>
-
-
-  <script src="../js/script.js" type="text/javascript"></script>
-</body>
+    <script src="../js/script.js" type="text/javascript"></script>
+  </body>
 </html>
