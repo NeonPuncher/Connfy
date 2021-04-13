@@ -34,8 +34,52 @@ form {
 
 }
 
+.content{
+ 
+    height: 3em;
+    display: grid;
+    margin: 0 12%;
+}
 
+form{
+  display: grid;
+}
 
+.submit{
+  display: grid;
+  justify-self: center;
+  margin-top: 20%;
+   width: 25%;
+   height: 45%;
+   border-radius: 25px;
+  border: 0 solid #414042;
+  background-color:#E79F37;
+  font-family: Roboto;
+  color: #414042;
+  -webkit-box-shadow: 1px 1px 3px 0.5px #606060;  
+  -moz-box-shadow:    1px 1px 3px 0.5px #606060;
+  box-shadow:         1px 1px 3px 0.5px #606060;
+}
+
+.input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #E79F37;
+
+  padding: 20px;
+  height: 20px;  
+  font-family: Montserrat;
+  font-weight: 300;
+  color: #414042;
+  background-color: #c1d3db;
+}
+
+.logo{
+  display: flex;
+  margin: auto;
+  margin: 25% 0 15% 0;
+  width: 18em;
+}
 
 /* Other elements */
 header {
@@ -62,5 +106,12 @@ header {
 	width:100%;
 
 	border-bottom: 1px solid gray;
+ 
+}
 
+h2{
+  font-family: Montserrat;
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #414042;
 }
