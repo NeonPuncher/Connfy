@@ -49,6 +49,12 @@ textarea {
     width: 3%;
 }
 
+.Icon:hover {
+    height: 3.2%;
+    width: 3.2%;
+    filter: contrast(170%);
+}
+
 .folder:hover {
     transition: 0.3s;
     filter: brightness(80%);
@@ -61,12 +67,6 @@ textarea {
 
 .folderIconText {
     border: 2px solid black;
-}
-
-.Icon:hover {
-    height: 3.2%;
-    width: 3.2%;
-    filter: contrast(170%);
 }
 
 .overlay {
@@ -112,4 +112,8 @@ textarea {
     position: relative;
     height: fit-content;
     background-color:  #fffeba;
+}
+
+#output {
+    width: 300px;
 }

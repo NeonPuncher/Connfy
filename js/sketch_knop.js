@@ -5,22 +5,16 @@ let button
 function setup()
 {
 	// Geef instructies hoe het eruit moet komen te zien:
-	textSize(20)
-	textAlign(CENTER)
-	text("zeg iets", width/2, height/2)
-	button = createButton('click me')
-	button.position(100, 400)
-	button.style('font-size', '60px')
-	myRec.onResult = showResult
-
+	myRec.onResult = createNote
 	//Functie die het recorden van je stem start
 	function startRec(){
 		myRec.start()
 	}
 
+	startRec()
 	//Wanneer de knop wordt gedrukt begint hij met recorden
-	button.mousePressed(startRec)
 }
+
 
 //Functie laat de text zien die word besproken
 function showResult()
@@ -30,6 +24,28 @@ function showResult()
 		text(myRec.resultString, width/2, height/2) //Veranderd de text naar wat de microfoon ziet
 		console.log(myRec.resultString) //Je ziet het resultaat nog een keer in de console
 	}
+}
+
+//Create new note
+//Check divlengt and create note with new Div id number
+//Add text area
+//Insert recorded string into textarea
+//Insert Note before element with ID = mydivheader
+let numDiv = 6
+function createNote()
+{
+	numDiv++
+	const newNote = document.createElement("div")
+	newNote.setAttribute("id", numDiv)
+	newNote.setAttribute("class", "note")
+	const newText = document.createElement("textarea")
+	console.log(myRec.resultString)
+	newText.innerHTML = myRec.resultString
+	newNote.appendChild(newText)
+	const currentDiv = document.getElementById("mydivheader")
+	document.body.insertBefore(newNote, currentDiv)
+	console.log(numDiv)
+	numDiv = numDiv
 }
 
 //Laad dit bestand zodra de window opstart

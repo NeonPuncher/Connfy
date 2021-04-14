@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Whiteboard</title>
         <link rel="stylesheet" href="test.css" type="text/css">
+        <link rel="stylesheet" href="mediastyle.css" type="text/css">
         <script type="module" src="js/sketch_knop.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
         <script src="lib/p5/addons/p5.speech.js"></script>
@@ -25,12 +26,12 @@
                 <p class="folderContentNote">Epic veel tekst waar veel in gaat staan uiteindelijk omdat ik zenuwachtig ben en niet weet wat ik hier moet gaan zetten.</p>
             </div>
         </div>
-        <div id="div1" class="note"><textarea>Select text in this field</textarea></div>
+        <div id="div1" class="note" ><textarea>Select text in this field</textarea></div>
         <div id="div2" class="note"><textarea>Select text in this field</textarea></div>
         <div id="div3" class="note"><textarea id="myArea">Select all this text in this field</textarea></div>
         <div id="div4" class="note">
             <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
-            <p><img id="output" width="300px" /></p>
+            <p><img id="output"/></p>
         </div>
         <div id="div5" class="note"><textarea id="myArea">Mark this text</textarea></div>
         <div id="div6" class="folder" onclick="folderActive()">
@@ -39,8 +40,9 @@
         </div>
         <div id="mydivheader" class="note"><h3>Marked Text:</h3></div>
 
-        <img src="Icons/NoteIcon.png" class="Icon" onclick="createNote (); LoadDivs()">
-        <img src="Icons/DrawIcon.png" class="Icon" onclick="activateDraw ()">
+
+        <img src="Icons/NoteIcon.png" class="Icon" onclick="LoadDivs(), setup()">
+        <img src="Icons/DrawIcon.png" class="Icon" onclick="activateDraw()">
         <label for="file" style="cursor: pointer;"><img src="Icons/ImageIcon.png" class="Icon"></label>
         <img src="Icons/DrawIcon.png" class="Icon" onclick="getSelectionText()">
 

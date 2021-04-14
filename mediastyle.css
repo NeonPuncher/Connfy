@@ -1,0 +1,128 @@
+@media only screen and (max-width: 600px) {
+    body {
+        overflow-y: hidden;
+    }
+
+    canvas {
+        width: 300px;
+        height: 670px;
+    }
+
+    p {
+        font-size: 200%;
+    }
+
+    h2 {
+        font-family: "Montserrat";
+    }
+    
+    h3 {
+        font-family: "Montserrat";
+    }
+    
+    h4 {
+        font-family: "Montserrat";
+        color: #e7a037;
+        font-size: 100%;
+    }
+
+    div {
+        position: absolute;
+        top: 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 15px 15px 15px 15px;
+        }
+
+    .note {
+        width: 150px;
+        height: fit-content;
+        background-color:  #fffeba;
+        padding: 10px;
+        }
+
+    textarea {
+        background-color: transparent;
+        border: transparent;
+        font-size: 19px;
+        width: 150px;
+        font-family:sans-serif;
+        }
+        
+    .overlay {
+        position: fixed;
+        top:10%;
+        left: 45%;
+        width: 300px;
+        line-height: 200px;
+        height: 50%;
+        margin-left: -150px;
+        margin-top: -20px;
+        background-color: #e3e3e3;
+    }
+
+    .overlayHeader {
+        border: 2px solid black;
+        position: relative;
+        margin-top: 0px;
+        padding-bottom: 20px;
+        height: 50px;
+        background-color: #63aed9;
+        color: white;
+    }
+    
+    .folderContent {
+        margin-top: 5%;
+        padding: 10px;
+        position: relative;
+        overflow: auto;
+        height: 70%;
+    }
+    
+    .folderContentHeader {
+        border: 10px solid #e7a037;
+        position: relative;
+        float: left;
+        margin-left: 10%;
+    }
+    
+    .folderContentNote {
+        margin: 20px;
+        padding: 20px;
+        position: relative;
+        height: fit-content;
+        font-size: 100%;
+        line-height: 20px;
+        background-color:  #fffeba;
+    }
+
+    .Icon {
+        margin: 0.5%;
+        height: 15%;
+        width: 15%;
+    }
+
+    .Icon:hover {
+        filter: brightness(80%);
+    }
+
+    .folder {
+        width: 200px;
+        line-height: 20px;
+    }
+
+    .folder:hover {
+        transition: 0.3s;
+        filter: brightness(80%);
+    }
+    
+    .folderIcon {
+        height: 30%;
+        width: 30%;
+    }
+
+    #output {
+        width: 150px;
+    }
+    
+  }

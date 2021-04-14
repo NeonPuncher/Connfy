@@ -3,14 +3,14 @@ function LoadDivs() {
 
     for (div of divs) div.onpointerdown = onpointerdown;            
     document.onpointermove = onpointermove;
-    document.onpointerup   = onpointerup;
+    document.onpointerup = onpointerup;
                 
         canvas.width = screen.width - 20;
         canvas.height = screen.height - 220;
                 
         var the_moving_div = ''; 
         var the_last_mouse_position = { x:0, y:0 };
-                
+
         function onpointerdown(e) {
             the_moving_div            = e.target.id;      // remember which div has been selected 
             the_last_mouse_position.x = e.clientX;        // remember where the mouse was when it was clicked
@@ -38,19 +38,4 @@ function LoadDivs() {
         }
 }
 
-//Create new note
-//Check divlengt and create note with new Div id number
-//Add text area
-//Insert Note before element with ID = mydivheader
 
-function createNote() {
-    var divnum = divs.length + 1;
-    const newNote = document.createElement("div");
-    newNote.setAttribute("id", divnum);
-    newNote.setAttribute("class", "note");
-    const newText = document.createElement("textarea");
-    newNote.appendChild(newText);
-    const currentDiv = document.getElementById("mydivheader");
-    document.body.insertBefore(newNote, currentDiv);
-    console.log(divs.length);
-}
