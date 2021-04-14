@@ -134,3 +134,20 @@ h2 {
     margin: 50px;
   }
 }
+
+#installButton {
+  display: none;
+  position: absolute;
+  right: 3%;
+  top: 1.5%;
+  width: 25%;
+  height: 5%;
+  border-radius: 25px;
+  border: 0 solid #414042;
+  background-color: #e79f37;
+  font-family: Roboto;
+  color: #414042;
+  -webkit-box-shadow: 1px 1px 3px 0.5px #414042;
+  -moz-box-shadow: 1px 1px 3px 0.5px #414042;
+  box-shadow: 1px 1px 3px 0.5px #414042;
+}
