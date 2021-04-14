@@ -5,8 +5,8 @@ function LoadDivs() {
     document.onpointermove = onpointermove;
     document.onpointerup = onpointerup;
                 
-        canvas.width = screen.width - 20;
-        canvas.height = screen.height - 220;
+        canvas.width = screen.width;
+        canvas.height = screen.height;
                 
         var the_moving_div = ''; 
         var the_last_mouse_position = { x:0, y:0 };

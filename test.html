@@ -14,21 +14,21 @@
     <body onload="LoadDivs()">
         <div class="header">
             <header>
-              <img class="arrow" src="../images/Arrow-left.png"> 
+              <img class="arrow" src="Icons/Arrow-left.png"> 
               <div class="line"></div>
             </header>
         </div>
         <canvas id="canvas" class="canvas"></canvas>
         <div class="overlay" id="overlay">
-            <div class="overlayHeader"><h2>Folder 1:</h2></div>
+            <div class="overlayHeader"><h2 align="center">Folder 1:</h2></div>
             <div class="folderContent">
-                <h4>Note 1:</h4>
+                <h4 class="folderContentHeader">Note 1:</h4>
                 <p class="folderContentNote">Epic veel tekst waar veel in gaat staan uiteindelijk omdat ik zenuwachtig ben en niet weet wat ik hier moet gaan zetten.</p>
-                <h4>Note 2:</h4>
+                <h4 class="folderContentHeader">Note 2:</h4>
                 <p class="folderContentNote">Epic veel tekst waar veel in gaat staan uiteindelijk omdat ik zenuwachtig ben en niet weet wat ik hier moet gaan zetten.</p>
-                <h4>Picture 1:</h4>
+                <h4 class="folderContentHeader">Picture 1:</h4>
                 <img src="Icons/FeatureMatrix.png" style="width: 100%;">
-                <h4>Note 3:</h4>
+                <h4 class="folderContentHeader">Note 3:</h4>
                 <p class="folderContentNote">Epic veel tekst waar veel in gaat staan uiteindelijk omdat ik zenuwachtig ben en niet weet wat ik hier moet gaan zetten.</p>
             </div>
         </div>
@@ -50,7 +50,7 @@
         <img src="Icons/NoteIcon.png" class="Icon" onclick="LoadDivs(), setup()">
         <img src="Icons/DrawIcon.png" class="Icon" onclick="activateDraw()">
         <label for="file" style="cursor: pointer;"><img src="Icons/ImageIcon.png" class="Icon"></label>
-        <img src="Icons/DrawIcon.png" class="Icon" onclick="getSelectionText()">
+        <img src="Icons/markerIcon.png" class="Icon" onclick="getSelectionText()">
 
         <script type="text/javascript" src="js/moveDiv.js"></script>
         <script type="text/javascript" src="js/loadImage.js"></script>
