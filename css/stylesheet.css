@@ -1,5 +1,5 @@
 @font-face {
-  font-family: custom;
+  font-family: Montserrat;
   src: url(../Montserrat-Regular.ttf);
 }
 @font-face {
@@ -8,17 +8,17 @@
 }
 
 p {
-  font-family: custom;
+  font-family: Montserrat;
   font-weight: 300;
 }
 
 /* Variables */
 :root {
   --colors-background-dark: #414042;
-  background-color: #dbdddc;
+  background-color: #fff;
   --colors-text-light: #fff;
   --colors-text-highlight: #e79f37;
-  --colors-text-dark: #000;
+  --colors-text-dark: #414042;
   --fonts-normal-text: arial, verdana;
 }
 
@@ -54,9 +54,9 @@ form {
   background-color: #e79f37;
   font-family: Roboto;
   color: #414042;
-  -webkit-box-shadow: 1px 1px 3px 0.5px #606060;
-  -moz-box-shadow: 1px 1px 3px 0.5px #606060;
-  box-shadow: 1px 1px 3px 0.5px #606060;
+  -webkit-box-shadow: 1px 1px 3px 0.5px #414042;
+  -moz-box-shadow: 1px 1px 3px 0.5px #414042;
+  box-shadow: 1px 1px 3px 0.5px #414042;
 }
 
 .input {
@@ -69,7 +69,7 @@ form {
   font-family: Montserrat;
   font-weight: 300;
   color: #414042;
-  background-color: #c1d3db;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .logo {
@@ -90,7 +90,7 @@ header {
 }
 
 .header {
-  background-color: #6e9fbc;
+  background-color: #63aed9;
 }
 
 .arrow {
@@ -102,7 +102,7 @@ header {
 .line {
   width: 100%;
 
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #1fb72828;
 }
 
 h2 {
