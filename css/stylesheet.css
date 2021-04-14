@@ -111,13 +111,28 @@ header {
 
 h2{
   font-family: Montserrat;
-  font-size: 1.3em;
+  font-size: 1em;
   font-weight: 400;
   color: #414042;
 }
 
 #spacing{
   margin-top: 20%;
+}
+
+
+.block{
+   background-color: #e5e5e5; 
+   height: 30em;
+   margin-top: 3em;
+   overflow: auto;
+}
+
+.textbox{
+  border: 1px solid black;
+  margin-bottom: 20px;
+  font-family: Montserrat;
+  padding:10px;
 }
 
 @media only screen and (min-width: 600px) {
