@@ -4,18 +4,14 @@ let buttonMic;
 
 function setup()
 {
-	// Doet de graphische dingen:
-	createCanvas(400, 400)
-	background(255, 255, 255)
-	fill(0, 0, 0, 255)
 	
 	// Geef instructies hoe het eruit moet komen te zien:
 	textSize(20)
 	textAlign(CENTER)
 	text("zeg iets", width/2, height/2)
 	buttonMic = createButton('click me')
-	buttonMic.position(100, 400)
-	buttonMic.style('font-size', '60px')
+	buttonMic.position(80, 400)
+	buttonMic.style('font-size', '20px')
 	myRec.onResult = showResult
 
 	//Functie die het recorden van je stem start
@@ -38,6 +34,13 @@ function showResult()
 		console.log(myRec.resultString) //Je ziet het resultaat nog een keer in de console
 	}
 }
+
+function addResult()
+let resultText = document.createElement("textarea")
+let placing = document.getElementById("micDisplay") 
+resultText.innerHTML = myRec.resultString;
+
+
 
 //Laad dit bestand zodra de window opstart
 window.setup = setup
