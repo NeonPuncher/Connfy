@@ -92,6 +92,7 @@ form {
   font-family: Montserrat;
   font-weight: 300;
   color: #414042;
+  filter: opacity(0%);
 }
 
 .logo {

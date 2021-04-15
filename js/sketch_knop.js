@@ -4,7 +4,6 @@ let buttonMic;
 
 function setup()
 {
-	
 	// Geef instructies hoe het eruit moet komen te zien:
 	buttonMic = createButton('inspreken')
 	buttonMic.position(140, 530)
@@ -20,17 +19,22 @@ function setup()
 	//Functie die het recorden van je stem start
 	function startRec(){
 		myRec.start()
-		console.log("De knop is ingedrukt")
+		changeMic()
 	}
 
 	//Wanneer de knop wordt gedrukt begint hij met recorden
-	buttonMic.mousePressed(startRec, console.log("This thing sucks bigger cock"))
+	buttonMic.mousePressed(startRec)
 }
 
 
 function addResult(){
 	const resultText = document.getElementById("note")
 	resultText.innerHTML = myRec.resultString
+	document.getElementById("micDisplay").style.webkitFilter = "opacity(0%)" 
+}
+
+function changeMic(){
+	document.getElementById("micDisplay").style.webkitFilter = "opacity(100%)"
 }
 
 //Laad dit bestand zodra de window opstart
