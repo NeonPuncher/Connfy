@@ -6,13 +6,16 @@ function setup()
 {
 	
 	// Geef instructies hoe het eruit moet komen te zien:
-	textSize(20)
-	textAlign(CENTER)
-	text("zeg iets", width/2, height/2)
-	buttonMic = createButton('click me')
-	buttonMic.position(80, 400)
-	buttonMic.style('font-size', '20px')
-	myRec.onResult = showResult
+	buttonMic = createButton('inspreken')
+	buttonMic.position(140, 530)
+	buttonMic.style('width', '26%')
+	buttonMic.style('height', '5%')
+	buttonMic.style('font-size', '15px')
+	buttonMic.style('color', '#414042')
+	buttonMic.style('background-color', '#e79f37')
+	buttonMic.style('border-radius', '1rem')
+	buttonMic.style('border', '0 solid #414042')
+	myRec.onResult = addResult
 
 	//Functie die het recorden van je stem start
 	function startRec(){
@@ -24,23 +27,11 @@ function setup()
 	buttonMic.mousePressed(startRec, console.log("This thing sucks bigger cock"))
 }
 
-//Functie laat de text zien die word besproken
-function showResult()
-{
-	console.log("This thing sucks cock")
-	if(myRec.resultValue==true) {
-		background(192, 255, 192) //Achtergrond wordt zoals een kladpapier geel
-		text(myRec.resultString, width/2, height/2) //Veranderd de text naar wat de microfoon ziet
-		console.log(myRec.resultString) //Je ziet het resultaat nog een keer in de console
-	}
+
+function addResult(){
+	const resultText = document.getElementById("note")
+	resultText.innerHTML = myRec.resultString
 }
-
-function addResult()
-let resultText = document.createElement("textarea")
-let placing = document.getElementById("micDisplay") 
-resultText.innerHTML = myRec.resultString;
-
-
 
 //Laad dit bestand zodra de window opstart
 window.setup = setup
