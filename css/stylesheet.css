@@ -46,10 +46,10 @@ form {
 .submit {
   display: grid;
   justify-self: center;
-  margin-top: 20%;
+  margin-top: 3.5rem;
   width: 25%;
   height: 45%;
-  border-radius: 25px;
+  border-radius: 1rem;
   border: 0 solid #414042;
   background-color: #e79f37;
   font-family: Roboto;
@@ -76,13 +76,22 @@ form {
   outline: 0;
   border-width: 1rem 1rem 1rem 1rem;
   border-color: #fffeba;
-
+  margin-top: 2rem;
   width: 85%;
   justify-self: center;
   font-family: Montserrat;
   font-weight: 300;
   color: #414042;
   background-color: #fffeba;
+}
+
+#micDisplay {
+  padding-top: 3rem;
+  margin-bottom: -1rem;
+  justify-self: center;
+  font-family: Montserrat;
+  font-weight: 300;
+  color: #414042;
 }
 
 .logo {
@@ -123,6 +132,7 @@ h2 {
   font-size: 1em;
   font-weight: 400;
   color: #414042;
+  text-align: center;
 }
 
 #spacing {

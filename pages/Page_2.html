@@ -15,15 +15,22 @@
     <div class="header">
       <header>
         <img class="arrow" src="../images/Arrow-left.png" />
+        <h2 style="color: white; margin-top: -11%; padding-bottom: 2%">
+          Tijdens het wandelen
+        </h2>
         <div class="line"></div>
       </header>
     </div>
 
     <div class="Content">
-      <h2 style="text-align: center">Tijdens het wandelen</h2>
       <form action="" method="POST">
         <textarea class="note" name="note" rows="18" cols="45"></textarea>
-
+        <img
+          src="/images/mic-off.svg"
+          alt="Microphone"
+          id="micDisplay"
+          onclick="changeMic();"
+        />
         <input
           class="submit"
           type="submit"
