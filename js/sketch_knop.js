@@ -7,13 +7,15 @@ function setup()
 	// Geef instructies hoe het eruit moet komen te zien:
 	buttonMic = createButton('Inspreken')
 	buttonMic.position(140, 530)
-	buttonMic.style('width', '26%')
-	buttonMic.style('height', '5%')
-	buttonMic.style('font-size', '15px')
+	buttonMic.style('width', '25%')
+	buttonMic.style('height', '4.5%')
+	buttonMic.style('font-family', 'Roboto')
+	buttonMic.style('font-size', '14px')
 	buttonMic.style('color', '#414042')
 	buttonMic.style('background-color', '#e79f37')
-	buttonMic.style('border-radius', '1rem')
+	buttonMic.style('border-radius', '2rem')
 	buttonMic.style('border', '0 solid #414042')
+	buttonMic.style('box-shadow', '1px 1px 3px 0.5px #414042')
 	myRec.onResult = addResult
 
 	//Functie die het recorden van je stem start

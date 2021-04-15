@@ -10,6 +10,9 @@
 p {
   font-family: Montserrat;
   font-weight: 300;
+  justify-self: center;
+  margin-top: 3rem;
+  margin-bottom: -2rem;
 }
 
 /* Variables */
@@ -49,6 +52,20 @@ form {
   margin-top: 3.5rem;
   width: 25%;
   height: 45%;
+  border-radius: 1rem;
+  border: 0 solid #414042;
+  background-color: #e79f37;
+  font-family: Roboto;
+  color: #414042;
+  -webkit-box-shadow: 1px 1px 3px 0.5px #414042;
+  -moz-box-shadow: 1px 1px 3px 0.5px #414042;
+  box-shadow: 1px 1px 3px 0.5px #414042;
+}
+
+.file {
+  display: grid;
+  justify-self: center;
+  margin-top: 3.5rem;
   border-radius: 1rem;
   border: 0 solid #414042;
   background-color: #e79f37;
