@@ -5,7 +5,7 @@ let buttonMic;
 function setup()
 {
 	// Geef instructies hoe het eruit moet komen te zien:
-	buttonMic = createButton('inspreken')
+	buttonMic = createButton('Inspreken')
 	buttonMic.position(140, 530)
 	buttonMic.style('width', '26%')
 	buttonMic.style('height', '5%')
