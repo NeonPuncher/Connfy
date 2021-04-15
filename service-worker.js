@@ -1,24 +1,24 @@
 const cacheName="Main_Page";
 const appFiles=[
   "/",
-  "pages/Page_1.html",
-  "pages/Page_2.html",
-  "pages/Page_3.html",
+  "/pages/Page_1.html",
+  "/pages/Page_2.html",
+  "/pages/Page_3.html",
   
-	"manifest.json",
-	"js/script.js",
-	"css/stylesheet.css",
+	"/manifest.json",
+	"/js/script.js",
+	"/css/stylesheet.css",
 
-	"images/icons/icon-512x512.png",
-  "images/icons/icon-192x192.png",
-  "images/icons/icon-144x144.png",
-  "images/Arrow-left.png",
-  "images/Connfy.png",
+	"/images/icons/icon-512x512.png",
+  "/images/icons/icon-192x192.png",
+  "/images/icons/icon-144x144.png",
+  "/images/Arrow-left.png",
+  "/images/Connfy.png",
   
-  "Montserrat-Light.ttf",
-  "Montserrat-Regular.ttf",
-  "Montserrat-SemiBold.ttf",
-  "Roboto-Regular.ttf"
+  "/Montserrat-Light.ttf",
+  "/Montserrat-Regular.ttf",
+  "/Montserrat-SemiBold.ttf",
+  "/Roboto-Regular.ttf"
 ];
 
 self.addEventListener("install",(installing)=>{
