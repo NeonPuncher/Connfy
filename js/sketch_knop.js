@@ -1,19 +1,19 @@
 const lang = navigator.language || 'nl-NL' //Stel taal waarop hij moet focusen in
 const myRec = new p5.SpeechRec(lang) // nieuwe P5.SpeechRec object aanmaken
-let button
 
 function setup()
 {
 	// Geef instructies hoe het eruit moet komen te zien:
+
 	myRec.onResult = createNote
-	//Functie die het recorden van je stem start
+
 	function startRec(){
 		myRec.start()
 	}
-
 	startRec()
-	//Wanneer de knop wordt gedrukt begint hij met recorden
+	//Functie die het recorden van je stem start
 }
+
 
 
 //Functie laat de text zien die word besproken
@@ -44,8 +44,6 @@ function createNote()
 	newNote.appendChild(newText)
 	const currentDiv = document.getElementById("mydivheader")
 	document.body.insertBefore(newNote, currentDiv)
-	console.log(numDiv)
-	numDiv = numDiv
 }
 
 //Laad dit bestand zodra de window opstart

@@ -1,6 +1,5 @@
 function LoadDivs() {
     divs = document.getElementsByTagName("div");
-
     for (div of divs) div.onpointerdown = onpointerdown;            
     document.onpointermove = onpointermove;
     document.onpointerup = onpointerup;
@@ -15,7 +14,7 @@ function LoadDivs() {
             the_moving_div            = e.target.id;      // remember which div has been selected 
             the_last_mouse_position.x = e.clientX;        // remember where the mouse was when it was clicked
             the_last_mouse_position.y = e.clientY;
-            e.target.style.border = "2px solid blue";     // highlight the border of the div
+            e.target.style.border = "2px solid #63aed9";     // highlight the border of the div
                 
             var divs = document.getElementsByTagName("div");
             e.target.style.zIndex = divs.length;          // put this div  on top
@@ -37,5 +36,7 @@ function LoadDivs() {
             the_moving_div = "";
         }
 }
+
+
 
 
