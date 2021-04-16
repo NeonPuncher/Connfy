@@ -47,12 +47,11 @@ function showResult()
 //Add text area
 //Insert recorded string into textarea
 //Insert Note before element with ID = mydivheader
-let numDiv = 6
 function createNote()
 {
-	numDiv++
+	let divnum = divs.length
 	const newNote = document.createElement("div")
-	newNote.setAttribute("id", numDiv)
+	newNote.setAttribute("id", divnum)
 	newNote.setAttribute("class", "note")
 	const newText = document.createElement("textarea")
 	console.log(myRec.resultString)
