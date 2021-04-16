@@ -1,16 +1,32 @@
 const lang = navigator.language || 'nl-NL' //Stel taal waarop hij moet focusen in
 const myRec = new p5.SpeechRec(lang) // nieuwe P5.SpeechRec object aanmaken
+let button
 
 function setup()
 {
 	// Geef instructies hoe het eruit moet komen te zien:
 
 	myRec.onResult = createNote
+	button = createButton('Start Rec')
+	button.position(115, 950)
+	button.style('margin-top', '-12.4rem')
+	button.style('margin-left', '8.8rem')
+	button.style('justify-self', 'center')
+	button.style('width', '19%')
+	button.style('height', '5.5%')
+	button.style('font-family', 'Roboto')
+	button.style('font-size', '14px')
+	button.style('color', '#414042')
+	button.style('background-color', '#e79f37')
+	button.style('border-radius', '2rem')
+	button.style('border', '0 solid #414042')
+	button.style('box-shadow', '1px 1px 3px 0.5px #414042')
+
+	button.mousePressed(startRec)
 
 	function startRec(){
 		myRec.start()
 	}
-	startRec()
 	//Functie die het recorden van je stem start
 }
 
