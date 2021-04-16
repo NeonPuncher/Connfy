@@ -1,3 +1,50 @@
+<?php
+
+session_start();
+include('conn.php');
+
+if(isset($_POST['VerderLogin'])){
+
+
+
+$username = $_POST['username'];
+$password = $_POST['pass'];
+
+
+
+$username = stripcslashes($username);
+$password = stripcslashes($password);
+
+//zoekt de naam en wachtwoord op uit de database
+$sql = "SELECT userid, username, pass FROM user WHERE username='$username' AND pass='$password'";
+$result = mysqli_query($conn, $sql);
+//zet de resultaten in $row
+$row = mysqli_fetch_array($result);
+
+$id = $row['userid'];   
+
+//controlleert of dezelfde rows de juiste gegevens hebben
+if ($row['username'] == $username && $row['pass'] == $password){
+
+    //zet de gebruikersnaam in een sessie waardoor deze ondhouden blijft
+    // $_SESSION['userid'] = $id;
+
+    echo $id;
+    //verwijst door naar de home.php
+    echo '<script type="text/javascript">
+    window.location = "meeting.php"
+</script>';
+
+// ?$id='.$row["userid"].'
+}
+else{
+    echo "verkeerde gebruikersnaam of wachtwoord";
+    // echo $result;
+}
+}
+
+?>
+
 <!DOCTYPE html>
 <html style="background-color: #6e9fbc">
   <head>

@@ -1,3 +1,34 @@
+<?php
+session_start();
+    require('conn.php');
+
+        // If the values are posted, insert them into the database.
+	if(isset($_POST['submit'])){
+        $naam = $_POST['naam'];
+        $aantal = $_POST['aantal'];
+        $lengte = $_POST['lengte'];
+
+            
+        $sql = "INSERT INTO `meeting` (naam, aantal, lengte) VALUES ('$naam','$aantal', '$lengte')";
+        // $result = mysqli_query($conn, $sql);
+
+        if (mysqli_query($conn, $sql)) {
+            $id = mysqli_insert_id($conn);
+
+            // $_SESSION['meetingid'] = $id;
+
+            echo '<script type="text/javascript">
+            window.location = "record.php?id='.$id.'"
+            </script>';
+
+        }
+        else{
+            echo "Er is iets misgegaan";
+            echo $result;
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html style="background-color: #63aed9">
   <head>
@@ -31,14 +62,14 @@
         <input
           class="input"
           type="text"
-          name="username"
+          name="naam"
           placeholder="Naam meeting"
         /><br />
         <h2 style="font-weight: 400">Aantal deelnemers</h2>
         <input
           class="input"
           type="number"
-          name="pass"
+          name="aantal"
           placeholder="Aantal deelnemers"
         />
         <br />
@@ -48,7 +79,7 @@
         <input
           class="input"
           type="text"
-          name="pass"
+          name="lengte"
           placeholder="Verwachtte tijd"
         />
         <br />

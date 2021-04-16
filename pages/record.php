@@ -1,3 +1,38 @@
+<?php
+session_start();
+    require('conn.php');
+    $id = isset($_GET['id']) ? $_GET['id'] : '';
+    echo $id;
+        // If the values are posted, insert them into the database.
+	if(isset($_POST['Opslaan'])){
+
+
+        $text = $_POST['tekst'];   
+    //     $image = $_FILES['image'] ['name'];
+    //     $folder = "afb/";
+    //     move_uploaded_file($_FILES['image']["tmp_name"], "$folder".$image);
+		// $target = "afb/".basename($image);
+            
+        $sql = "INSERT INTO `notes` (tekst) VALUES ('$text')";
+
+        if (mysqli_query($conn, $sql)) {
+            $id2 = mysqli_insert_id($conn);
+            $_SESSION['noteid'] = $id2;
+            
+            $sql2 = "INSERT INTO `meeting_notes` (noteid, meetingid) VALUES ('$id2', '$id')";
+            $result2 = mysqli_query($conn, $sql2);
+            
+            echo '<script type="text/javascript">
+            window.location = "meetingl.php?id='.$id.'"
+             </script>';
+        }
+        else{
+            echo "Er is iets misgegaan";
+            echo $result;
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -40,13 +75,13 @@
           cols="45"
         ></textarea>
         <img src="/images/mic-on.svg" alt="Microphone" id="micDisplay" />
-        <input
+        <!-- <input
           class="submit"
           type="submit"
           value="Inspreken"
           name="Inspreken"
           required
-        />
+        /> -->
 
         <input
           class="submit"

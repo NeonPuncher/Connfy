@@ -1,3 +1,9 @@
+<?php
+session_start();
+    require('conn.php');
+    
+?>
+
 <!DOCTYPE html>
 <html style="background-color: #e5e5e5">
   <head>
@@ -25,7 +31,28 @@
 
     <div class="content">
       <div class="block" id="block"></div>
+                  <table id="connfy">
+                  <tr><th>ID</th><th>naam</th><th>aantal</th><th>lengte</th><th>route</th></tr>
+                  
+                  <?php
 
+              $sql="SELECT * FROM meeting";
+              $result=mysqli_query($conn, $sql);
+              while($row=mysqli_fetch_row($result))
+              {
+                echo '<tr>';
+                echo '<td>'. $row[0] . '</td>';
+                echo '<td>'. $row[1] . '</td>';
+                echo '<td>'. $row[2] . '</td>';	
+                    echo '<td>'. $row[3] . '</td>';	
+                    echo '<td>'. $row[4] . '</td>';	
+                    echo '<td><a href="lijst.php?id='.$row[0].'"><button class="button_style1">bijwerken</button></a></td>';
+                    echo '</tr>';
+              }
+                 
+
+                ?>
+                </table>
       <input
         onclick="createNote()"
         href="#"
