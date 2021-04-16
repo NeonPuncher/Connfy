@@ -50,7 +50,7 @@
         <label for="file" style="cursor: pointer;"><img src="Icons/ImageIcon.png" class="Icon"></label>
         <img src="Icons/markerIcon.png" class="Icon" onclick="getSelectionText()">
 
-        <script type="module" src="js/sketch_knop.js"></script>
+        <script type="module" src="js/sketch_knop_board.js"></script>
         <script type="text/javascript" src="js/moveDiv.js"></script>
         <script type="text/javascript" src="js/createNote.js"></script>
         <script type="text/javascript" src="js/loadImage.js"></script>
