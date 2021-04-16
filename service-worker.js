@@ -1,7 +1,6 @@
 const cacheName="Main_Page";
 const appFiles=[
 "/",
-"/pages/Page_1.html",
 "/pages/edit.html",
 "/pages/record.html",
 

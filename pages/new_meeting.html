@@ -1,53 +1,69 @@
 <!DOCTYPE html>
-<html style="background-color: #6e9fbc;">
+<html style="background-color: #6e9fbc">
+  <head>
+    <link rel="manifest" href="../manifest.json" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Connfy PWA</title>
 
-<head>
-  <link rel="manifest" href="../manifest.json">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Connfy PWA</title>
-  
-  <link rel="stylesheet" href="../css/stylesheet.css" type="text/css">
- 
-</head>
+    <link rel="stylesheet" href="../css/stylesheet.css" type="text/css" />
+  </head>
 
-<body>
-  <div class="header">
-    <header>
-      
-      <img class="arrow" src="../images/Arrow-left.png"> 
-    
-      <div class="line"></div>
-    </header>
-  </div>
+  <body>
+    <div class="header">
+      <header>
+        <a href="/index.html">
+          <img class="arrow" src="../images/Arrow-left.png" />
+        </a>
+        <div class="line"></div>
+      </header>
+    </div>
 
-  <div class="content">
-  <img class="logo" src="../images/Connfy.png">
-  
+    <div class="content">
+      <img class="logo" src="../images/Connfy.png" />
 
-  <form action="" method="POST">
-    <h2 style="font-weight: 400;">Naam van meeting:</h2>
-    <input class="input" type="text" name="username" placeholder="Naam meeting"><br>
-    <h2 style="font-weight: 400;">Aantal deelnemers</h2>
-      <input class="input" type="number" name="pass" placeholder="Aantal deelnemers"/> <br>
+      <form action="" method="POST">
+        <h2 style="font-weight: 400">Naam van meeting:</h2>
+        <input
+          class="input"
+          type="text"
+          name="username"
+          placeholder="Naam meeting"
+        /><br />
+        <h2 style="font-weight: 400">Aantal deelnemers</h2>
+        <input
+          class="input"
+          type="number"
+          name="pass"
+          placeholder="Aantal deelnemers"
+        />
+        <br />
 
-      <h2 style="font-weight: 400;">Verwachtte duur meeting:</h2>
-      
-      
-      <input class="input" type="text" name="pass" placeholder="Verwachtte tijd"/> <br>
-    
-      
+        <h2 style="font-weight: 400">Verwachtte duur meeting:</h2>
 
-      <input href="pages.html" class="submit" type="submit" value="Verder" name="submit" required>
-    
-    </form>
+        <input
+          class="input"
+          type="text"
+          name="pass"
+          placeholder="Verwachtte tijd"
+        />
+        <br />
 
+        <input
+          href="pages.html"
+          class="submit"
+          type="submit"
+          value="Verder"
+          name="submit"
+          required
+        />
+      </form>
+    </div>
 
-
-</div>
-
-
-  <script src="../js/script.js" type="text/javascript"></script>
-</body>
+    <script src="../js/script.js" type="text/javascript"></script>
+  </body>
 </html>
