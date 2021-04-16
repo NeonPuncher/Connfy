@@ -11,10 +11,12 @@ function resize() {
       if(drawactivate == 1)
       {
           drawactivate = 0;
+          document.getElementById("drawIcon").style.webkitFilter = "brightness(100%)";
       }
       else
       {
           drawactivate = 1;
+          document.getElementById("drawIcon").style.webkitFilter = "brightness(80%)";
       }
       console.log(drawactivate);
   }

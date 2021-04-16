@@ -4,7 +4,7 @@
 //Add text area
 //Insert Note before element with ID = mydivheader
 function createNote() {
-    var divnum = 6 + 1;
+    var divnum = divs.length
     const newNote = document.createElement("div");
     newNote.setAttribute("id", divnum);
     newNote.setAttribute("class", "note");

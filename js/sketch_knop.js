@@ -8,11 +8,11 @@ function setup()
 
 	myRec.onResult = createNote
 	button = createButton('Start Rec')
-	button.position(115, 950)
+	button.position(190, 1065)
 	button.style('margin-top', '-12.4rem')
 	button.style('margin-left', '8.8rem')
 	button.style('justify-self', 'center')
-	button.style('width', '19%')
+	button.style('width', '5%')
 	button.style('height', '5.5%')
 	button.style('font-family', 'Roboto')
 	button.style('font-size', '14px')
