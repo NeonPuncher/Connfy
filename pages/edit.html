@@ -32,13 +32,21 @@
           rows="18"
           cols="45"
         ></textarea>
-        <p class="content">Nieuwe afbeelding uploaden:</p>
-        <input type="file" class="file" name="filename" required />
+        <p>Nieuwe afbeelding uploaden:</p>
+        <input type="file" class="file" name="filename" />
 
         <input
           class="submit"
           type="submit"
           value="Opslaan"
+          name="submit"
+          required
+        />
+
+        <input
+          class="submit"
+          type="submit"
+          value="Naar whiteboard"
           name="submit"
           required
         />

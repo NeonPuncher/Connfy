@@ -6,7 +6,10 @@ function setup()
 {
 	// Geef instructies hoe het eruit moet komen te zien:
 	buttonMic = createButton('Inspreken')
-	buttonMic.position(140, 530)
+	buttonMic.position('absolute')
+	buttonMic.style('margin-top', '-12.4rem')
+	buttonMic.style('margin-left', '8.8rem')
+	buttonMic.style('justify-self', 'center')
 	buttonMic.style('width', '25%')
 	buttonMic.style('height', '4.5%')
 	buttonMic.style('font-family', 'Roboto')
