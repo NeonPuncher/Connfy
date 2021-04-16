@@ -50,8 +50,9 @@ form {
   display: grid;
   justify-self: center;
   margin-top: 3.5rem;
-  width: 25%;
+  width: auto;
   height: 45%;
+  padding: 0 1rem 0 1rem;
   border-radius: 1rem;
   border: 0 solid #414042;
   background-color: #e79f37;
@@ -151,6 +152,24 @@ h2 {
   font-weight: 400;
   color: #414042;
   text-align: center;
+}
+
+#spacing {
+  margin-top: 20%;
+}
+
+.block {
+  background-color: #e5e5e5;
+  height: 30em;
+  margin-top: 3em;
+  overflow: auto;
+}
+
+.textbox {
+  border: 1px solid black;
+  margin-bottom: 20px;
+  font-family: Montserrat;
+  padding: 10px;
 }
 
 #spacing {
