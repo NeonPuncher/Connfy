@@ -33,7 +33,7 @@
         style="width: auto"
         type="submit"
         value="Nieuwe Meeting"
-        name="submit"
+        name="NieuweMeeting"
         required
       />
     </div>

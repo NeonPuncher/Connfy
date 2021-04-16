@@ -11,8 +11,6 @@ p {
   font-family: Montserrat;
   font-weight: 300;
   justify-self: center;
-  margin-top: 3rem;
-  margin-bottom: -2rem;
 }
 
 /* Variables */
@@ -193,6 +191,11 @@ h2 {
   .submit {
     margin: 50px;
   }
+}
+
+#titel {
+  margin-top: 3rem;
+  margin-bottom: -2rem;
 }
 
 #installButton {

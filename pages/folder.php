@@ -65,7 +65,7 @@
         style="width: auto"
         type="submit"
         value="Nieuwe Notitie"
-        name="submit"
+        name="NieuweNotitie"
         required
       />
     </div>

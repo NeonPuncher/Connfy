@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="background-color: #6e9fbc">
+<html style="background-color: #63aed9">
   <head>
     <link rel="manifest" href="../manifest.json" />
     <meta
@@ -16,7 +16,9 @@
   <body>
     <div class="header">
       <header>
-        <img class="arrow" src="../images/Arrow-left.png" />
+        <a href="/index.html">
+          <img class="arrow" src="../images/Arrow-left.png" />
+        </a>
         <div class="line"></div>
       </header>
     </div>
@@ -25,27 +27,38 @@
       <img class="logo" src="../images/Connfy.png" />
 
       <form action="" method="POST">
-        <h2 style="font-weight: 400">Gebruikersnaam:</h2>
+        <h2 style="font-weight: 400">Naam van meeting:</h2>
         <input
           class="input"
           type="text"
           name="username"
-          placeholder="Gebruikersnaam"
+          placeholder="Naam meeting"
         /><br />
-        <h2 style="font-weight: 400">Wachtwoord:</h2>
+        <h2 style="font-weight: 400">Aantal deelnemers</h2>
         <input
           class="input"
-          type="password"
+          type="number"
           name="pass"
-          placeholder="Wachtwoord"
+          placeholder="Aantal deelnemers"
+        />
+        <br />
+
+        <h2 style="font-weight: 400">Verwachtte duur meeting:</h2>
+
+        <input
+          class="input"
+          type="text"
+          name="pass"
+          placeholder="Verwachtte tijd"
         />
         <br />
 
         <input
+          href="pages.html"
           class="submit"
           type="submit"
           value="Verder"
-          name="submit"
+          name="VerderMeeting"
           required
         />
       </form>

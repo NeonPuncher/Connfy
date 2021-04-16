@@ -10,6 +10,11 @@
     <title>Connfy PWA</title>
     <link rel="manifest" href="/manifest.json" />
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+    <script src="../lib/p5/addons/p5.speech.js"></script>
+
+    <script type="module" src="../js/sketch_knop.js"></script>
   </head>
 
   <body>
@@ -19,7 +24,7 @@
           <img class="arrow" src="../images/Arrow-left.png" />
         </a>
         <h2 style="color: white; margin-top: -11%; padding-bottom: 2%">
-          Notitie bewerken
+          Tijdens het wandelen
         </h2>
         <div class="line"></div>
       </header>
@@ -34,22 +39,20 @@
           rows="18"
           cols="45"
         ></textarea>
-        <p>Nieuwe afbeelding uploaden:</p>
-        <input type="file" class="file" name="filename" />
-
+        <img src="/images/mic-on.svg" alt="Microphone" id="micDisplay" />
         <input
           class="submit"
           type="submit"
-          value="Opslaan"
-          name="submit"
+          value="Inspreken"
+          name="Inspreken"
           required
         />
 
         <input
           class="submit"
           type="submit"
-          value="Naar whiteboard"
-          name="submit"
+          value="Opslaan"
+          name="Opslaan"
           required
         />
       </form>

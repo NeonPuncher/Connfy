@@ -16,9 +16,7 @@
   <body>
     <div class="header">
       <header>
-        <a href="/index.html">
-          <img class="arrow" src="../images/Arrow-left.png" />
-        </a>
+        <img class="arrow" src="../images/Arrow-left.png" />
         <div class="line"></div>
       </header>
     </div>
@@ -27,38 +25,27 @@
       <img class="logo" src="../images/Connfy.png" />
 
       <form action="" method="POST">
-        <h2 style="font-weight: 400">Naam van meeting:</h2>
+        <h2 style="font-weight: 400">Gebruikersnaam:</h2>
         <input
           class="input"
           type="text"
           name="username"
-          placeholder="Naam meeting"
+          placeholder="Gebruikersnaam"
         /><br />
-        <h2 style="font-weight: 400">Aantal deelnemers</h2>
+        <h2 style="font-weight: 400">Wachtwoord:</h2>
         <input
           class="input"
-          type="number"
+          type="password"
           name="pass"
-          placeholder="Aantal deelnemers"
-        />
-        <br />
-
-        <h2 style="font-weight: 400">Verwachtte duur meeting:</h2>
-
-        <input
-          class="input"
-          type="text"
-          name="pass"
-          placeholder="Verwachtte tijd"
+          placeholder="Wachtwoord"
         />
         <br />
 
         <input
-          href="pages.html"
           class="submit"
           type="submit"
           value="Verder"
-          name="submit"
+          name="VerderLogin"
           required
         />
       </form>
