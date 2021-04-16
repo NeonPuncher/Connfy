@@ -1,24 +1,27 @@
 @font-face {
-  font-family: custom;
-  src:url(../Montserrat-Regular.ttf);
+  font-family: Montserrat;
+  src: url(../Montserrat-Regular.ttf);
 }
 @font-face {
   font-family: Roboto;
   src: url(../Roboto-Regular.ttf);
 }
 
-p{
-  font-family: custom;
+p {
+  font-family: Montserrat;
   font-weight: 300;
+  justify-self: center;
+  margin-top: 3rem;
+  margin-bottom: -2rem;
 }
 
 /* Variables */
 :root {
   --colors-background-dark: #414042;
-  background-color: #dbdddc;
+  background-color: #fff;
   --colors-text-light: #fff;
   --colors-text-highlight: #e79f37;
-  --colors-text-dark: #000;
+  --colors-text-dark: #414042;
   --fonts-normal-text: arial, verdana;
 }
 
@@ -31,50 +34,85 @@ body,
 form {
   padding: 0px;
   margin: 0px;
-
 }
 
-.content{
- 
-    height: 3em;
-    display: grid;
-    margin: 0 12%;
+.content {
+  height: 3em;
+  display: grid;
+  margin: 0 12%;
 }
 
-form{
+form {
   display: grid;
 }
 
-.submit{
+.submit {
   display: grid;
   justify-self: center;
-  margin-top: 20%;
-   width: 25%;
-   height: 45%;
-   border-radius: 25px;
+  margin-top: 3.5rem;
+  width: 25%;
+  height: 45%;
+  border-radius: 1rem;
   border: 0 solid #414042;
-  background-color:#E79F37;
+  background-color: #e79f37;
   font-family: Roboto;
   color: #414042;
-  -webkit-box-shadow: 1px 1px 3px 0.5px #606060;  
-  -moz-box-shadow:    1px 1px 3px 0.5px #606060;
-  box-shadow:         1px 1px 3px 0.5px #606060;
+  -webkit-box-shadow: 1px 1px 3px 0.5px #414042;
+  -moz-box-shadow: 1px 1px 3px 0.5px #414042;
+  box-shadow: 1px 1px 3px 0.5px #414042;
+}
+
+.file {
+  display: grid;
+  justify-self: center;
+  margin-top: 3.5rem;
+  border-radius: 1rem;
+  border: 0 solid #414042;
+  background-color: #e79f37;
+  font-family: Roboto;
+  color: #414042;
+  -webkit-box-shadow: 1px 1px 3px 0.5px #414042;
+  -moz-box-shadow: 1px 1px 3px 0.5px #414042;
+  box-shadow: 1px 1px 3px 0.5px #414042;
 }
 
 .input {
   outline: 0;
   border-width: 0 0 2px;
-  border-color: #E79F37;
+  border-color: #e79f37;
 
   padding: 20px;
-  height: 20px;  
+  height: 20px;
   font-family: Montserrat;
   font-weight: 300;
   color: #414042;
-  background-color: #c1d3db;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
-.logo{
+.note {
+  outline: 0;
+  border-width: 1rem 1rem 1rem 1rem;
+  border-color: #fffeba;
+  margin-top: 2rem;
+  width: 85%;
+  justify-self: center;
+  font-family: Montserrat;
+  font-weight: 300;
+  color: #414042;
+  background-color: #fffeba;
+}
+
+#micDisplay {
+  padding-top: 3rem;
+  margin-bottom: -1rem;
+  justify-self: center;
+  font-family: Montserrat;
+  font-weight: 300;
+  color: #414042;
+  filter: opacity(0%);
+}
+
+.logo {
   display: flex;
   margin: auto;
   margin: 25% 0 15% 0;
@@ -91,48 +129,32 @@ header {
   overflow: hidden;
 }
 
-.header{
-	background-color: #6e9fbc;
+.header {
+  background-color: #63aed9;
 }
 
-
-.arrow{
-	margin: 15px;
-	width: 30px;
-	height: 30px;
+.arrow {
+  margin: 15px;
+  width: 30px;
+  height: 30px;
 }
 
-.line{
-	width:100%;
+.line {
+  width: 100%;
 
-	border-bottom: 1px solid gray;
- 
+  border-bottom: 1px solid #1fb72828;
 }
 
-h2{
+h2 {
   font-family: Montserrat;
   font-size: 1em;
   font-weight: 400;
   color: #414042;
+  text-align: center;
 }
 
-#spacing{
+#spacing {
   margin-top: 20%;
-}
-
-
-.block{
-   background-color: #e5e5e5; 
-   height: 30em;
-   margin-top: 3em;
-   overflow: auto;
-}
-
-.textbox{
-  border: 1px solid black;
-  margin-bottom: 20px;
-  font-family: Montserrat;
-  padding:10px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -140,17 +162,33 @@ h2{
     margin: 20px auto 20px auto;
   }
 
-  #spacing{
+  #spacing {
     margin-top: 20px;
   }
 
-  form{
+  form {
     width: 30%;
     justify-self: center;
   }
-  
-  .submit{
+
+  .submit {
     margin: 50px;
   }
+}
 
+#installButton {
+  display: none;
+  position: absolute;
+  right: 3%;
+  top: 1.5%;
+  width: 25%;
+  height: 5%;
+  border-radius: 25px;
+  border: 0 solid #414042;
+  background-color: #e79f37;
+  font-family: Roboto;
+  color: #414042;
+  -webkit-box-shadow: 1px 1px 3px 0.5px #414042;
+  -moz-box-shadow: 1px 1px 3px 0.5px #414042;
+  box-shadow: 1px 1px 3px 0.5px #414042;
 }
