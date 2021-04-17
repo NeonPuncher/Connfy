@@ -1,8 +1,8 @@
 const cacheName="Main_Page";
 const appFiles=[
 "/",
-"/pages/edit.html",
-"/pages/record.html",
+"/pages/edit.php",
+"/pages/record.php",
 
 "/manifest.json",
 "/js/script.js",

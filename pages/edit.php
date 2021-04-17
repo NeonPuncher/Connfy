@@ -34,7 +34,7 @@
           rows="18"
           cols="45"
         ></textarea>
-        <p id="titel">Nieuwe afbeelding uploaden:</p>
+        <p class="titel">Nieuwe afbeelding uploaden:</p>
         <input type="file" class="file" name="filename" />
 
         <input

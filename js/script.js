@@ -77,17 +77,3 @@ button.addEventListener("click", (installApp)=>{
   });
 });
 }
-
-var mic_tracker = 'mic off';
-
-function changeMic(){
-var mic = document.getElementById('micDisplay');
-if(mic_tracker=='on'){
-  mic.src='/images/mic-off.svg';
-  mic_tracker='off';
-}
-else{
-  mic.src='/images/mic-on.svg';
-  mic_tracker='on';
-}
-}

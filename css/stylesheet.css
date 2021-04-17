@@ -146,14 +146,15 @@ header {
 
 h2 {
   font-family: Montserrat;
-  font-size: 1em;
+  font-size: 1.25rem;
   font-weight: 400;
   color: #414042;
   text-align: center;
 }
 
-#spacing {
-  margin-top: 20%;
+.spacing {
+  margin-top: 15%;
+  font-size: 1.1rem;
 }
 
 .block {
@@ -174,28 +175,23 @@ h2 {
   margin-top: 20%;
 }
 
-@media only screen and (min-width: 600px) {
-  .logo {
-    margin: 20px auto 20px auto;
-  }
-
-  #spacing {
-    margin-top: 20px;
-  }
-
-  form {
-    width: 30%;
-    justify-self: center;
-  }
-
-  .submit {
-    margin: 50px;
-  }
-}
-
-#titel {
+.titel {
   margin-top: 3rem;
   margin-bottom: -2rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.titel2 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-size: 1.25rem;
+  text-align: center;
+  border-style: solid;
+  border-color: #fff;
+  justify-self: center;
+  padding: 0.6rem;
 }
 
 #installButton {
@@ -213,4 +209,23 @@ h2 {
   -webkit-box-shadow: 1px 1px 3px 0.5px #414042;
   -moz-box-shadow: 1px 1px 3px 0.5px #414042;
   box-shadow: 1px 1px 3px 0.5px #414042;
+}
+
+@media only screen and (min-width: 600px) {
+  .logo {
+    margin: 20px auto 20px auto;
+  }
+
+  #spacing {
+    margin-top: 20px;
+  }
+
+  form {
+    width: 30%;
+    justify-self: center;
+  }
+
+  .submit {
+    margin: 50px;
+  }
 }

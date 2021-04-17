@@ -14,7 +14,7 @@
   <body>
     <div class="header">
       <header>
-        <a href="/index.html">
+        <a href="/login.php">
           <img class="arrow" src="../images/Arrow-left.png" />
         </a>
         <div class="line"></div>
@@ -23,31 +23,11 @@
 
     <div class="content">
       <img class="logo" src="/images/Connfy.png" />
+      <h2 class="titel2">Vergeten?</h2>
 
-      <form action="" method="POST">
-        <h2 class="spacing" style="font-weight: 400">Gebruikersnaam:</h2>
-        <input
-          class="input"
-          type="text"
-          name="username"
-          placeholder="Gebruikersnaam"
-        /><br />
-        <h2 style="font-weight: 400">Wachtwoord:</h2>
-        <input
-          class="input"
-          type="password"
-          name="pass"
-          placeholder="Wachtwoord"
-        />
-        <br />
-
-        <input
-          class="submit"
-          type="submit"
-          value="Verder"
-          name="submit"
-          required
-        />
+      <form action="/pages/email.php" method="POST" id="form">
+        <button class="submit gebruikersnaam" style="display: block">Gebruikersnaam</button>
+        <button class="submit wachtwoord" style="display: block">Wachtwoord</button>
       </form>
     </div>
 
