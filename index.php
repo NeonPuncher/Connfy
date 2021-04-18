@@ -1,9 +1,9 @@
 <?php
 
 session_start();
-include('conn.php');
+include('pages/conn.php');
 
-if(isset($_POST['VerderLogin'])){
+if(isset($_POST['loginknop'])){
 
 
 
@@ -31,9 +31,8 @@ if ($row['username'] == $username && $row['pass'] == $password){
 
     echo $id;
     //verwijst door naar de home.php
-    echo '<script type="text/javascript">
-    window.location = "meeting.php"
-</script>';
+    header("Location: /pages/meetings.php");
+
 
 // ?$id='.$row["userid"].'
 }
@@ -46,9 +45,9 @@ else{
 ?>
 
 <!DOCTYPE html>
-<html style="background-color: #6e9fbc">
+<html style="background-color: #63aed9">
   <head>
-    <link rel="manifest" href="../manifest.json" />
+    <link rel="manifest" href="manifest.json" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -57,19 +56,19 @@ else{
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Connfy PWA</title>
 
-    <link rel="stylesheet" href="../css/stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="css/stylesheet.css" type="text/css" />
   </head>
 
   <body>
     <div class="header">
       <header>
-        <img class="arrow" src="../images/Arrow-left.png" />
+        <button id="installButton">Installeren</button>
         <div class="line"></div>
       </header>
     </div>
 
     <div class="content">
-      <img class="logo" src="../images/Connfy.png" />
+      <img class="logo" src="/images/Connfy.png" />
 
       <form action="" method="POST">
         <h2 style="font-weight: 400">Gebruikersnaam:</h2>
@@ -88,16 +87,26 @@ else{
         />
         <br />
 
-        <input
+
+      </form>
+      <br />
+      <input
+          onclick="window.location.href = '/pages/meetings.php';"
           class="submit"
           type="submit"
           value="Verder"
-          name="VerderLogin"
-          required
+          name="loginknop"
         />
-      </form>
+        <br />
+<input
+onclick="location.href = '/pages/vergeten.php';"
+  class="submit"
+  type="submit"
+  value="Vergeten?"
+  name="Vergeten"
+/>
     </div>
 
-    <script src="../js/script.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
   </body>
 </html>

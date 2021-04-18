@@ -13,7 +13,9 @@
     <body onload="LoadDivs()">
         <div class="header">
             <header>
-              <img class="arrow" src="/images/Arrow-left.png"> 
+                <a href="/pages/meetings.php">
+                    <img class="arrow" src="../images/Arrow-left.png" />
+                </a> 
               <div class="line"></div>
             </header>
         </div>
@@ -39,10 +41,10 @@
             <p><img id="output"/></p>
         </div>
         <div id="div5" class="note"><textarea id="myArea">Mark this text</textarea></div>
-        <div id="div6" class="folder" onclick="folderActive()">
+        <a href="folder.php"> <div id="div6" class="folder">
             <img src="/images/icons/FolderIcon.png" class="folderIcon">
             <h3>Folder</h3>
-        </div>
+        </div></a>
         <div id="mydivheader" class="note"><h3>Marked Text:</h3></div>
 
         <img src="/images/icons/NoteIcon.png" class="Icon" onclick="createNote() ,LoadDivs()">

@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db = "connfy";
+$servername = "rdbms.strato.de";
+$username = "dbu328361";
+$password = "@Nanas454!";
+$db = "dbs1827892";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $db);

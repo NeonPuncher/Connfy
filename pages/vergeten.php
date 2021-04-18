@@ -14,7 +14,7 @@
   <body>
     <div class="header">
       <header>
-        <a href="/login.php">
+        <a href="../index.php">
           <img class="arrow" src="../images/Arrow-left.png" />
         </a>
         <div class="line"></div>

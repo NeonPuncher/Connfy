@@ -1,3 +1,39 @@
+<?php
+session_start();
+require('conn.php');
+$id = isset($_GET['id']) ? $_GET['id'] : '';
+// echo $id;
+    // If the values are posted, insert them into the database.
+if(isset($_POST['OpslaanEdit'])){
+
+     $tekst = $_POST['tekst'];
+    $image = $_FILES['image'] ['name'];
+    $folder = "afb/";
+    move_uploaded_file($_FILES['image']["tmp_name"], "$folder".$image);
+    $target = "afb/".basename($image);
+        
+    $sql = "INSERT INTO `notes` (tekst, image) VALUES ('$tekst', '$image')";
+
+    if (mysqli_query($conn, $sql)) {
+        $id2 = mysqli_insert_id($conn);
+        $_SESSION['noteid'] = $id2;
+        
+        $sql2 = "INSERT INTO `meeting_notes` (noteid, meetingid) VALUES ('$id2', '$id')";
+        $result2 = mysqli_query($conn, $sql2);
+        
+        echo '<script type="text/javascript">
+        window.location = "folder.php?id='.$id.'"
+         </script>';
+    }
+    else{
+        echo "Er is iets misgegaan";
+        echo $result;
+    }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,7 +51,7 @@
   <body>
     <div class="header">
       <header>
-        <a href="/index.html">
+        <a href="/pages/whiteboard.php">
           <img class="arrow" src="../images/Arrow-left.png" />
         </a>
         <h2 style="color: white; margin-top: -11%; padding-bottom: 2%">
@@ -30,28 +66,28 @@
         <textarea
           class="note"
           id="note"
-          name="note"
+          name="tekst"
           rows="18"
           cols="45"
         ></textarea>
         <p class="titel">Nieuwe afbeelding uploaden:</p>
-        <input type="file" class="file" name="filename" />
+        <input type="file" class="file" name="image" />
 
         <input
+          onclick="location.href = 'whiteboard.php';"
           class="submit"
           type="submit"
           value="Opslaan"
           name="OpslaanEdit"
-          required
         />
 
-        <input
+        <!-- <input
+
           class="submit"
           type="submit"
           value="Naar whiteboard"
           name="NaarWhiteboard"
-          required
-        />
+        /> -->
       </form>
     </div>
 
