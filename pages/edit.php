@@ -51,7 +51,7 @@ if(isset($_POST['OpslaanEdit'])){
   <body>
     <div class="header">
       <header>
-        <a href="/index.html">
+        <a href="/pages/whiteboard.php">
           <img class="arrow" src="../images/Arrow-left.png" />
         </a>
         <h2 style="color: white; margin-top: -11%; padding-bottom: 2%">

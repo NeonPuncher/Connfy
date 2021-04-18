@@ -13,7 +13,9 @@
     <body onload="LoadDivs()">
         <div class="header">
             <header>
-              <img class="arrow" src="/images/Arrow-left.png"> 
+                <a href="/pages/meetings.php">
+                    <img class="arrow" src="../images/Arrow-left.png" />
+                </a> 
               <div class="line"></div>
             </header>
         </div>

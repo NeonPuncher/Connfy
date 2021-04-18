@@ -30,9 +30,6 @@ session_start();
   <body>
     <div class="header">
       <header>
-        <a href="../index.html">
-          <img class="arrow" src="../images/Arrow-left.png" />
-        </a>
         <div class="line"></div>
       </header>
     </div>
