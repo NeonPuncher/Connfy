@@ -8,6 +8,10 @@
   src: url(../Roboto-Regular.ttf);
 }
 
+body {
+  margin: 0;
+}
+
 p {
   font-family: "Montserrat";
 }
