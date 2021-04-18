@@ -47,7 +47,7 @@ session_start();
   <body>
     <div class="header">
       <header>
-        <a href="/pages/Meetings.php">
+        <a href="/pages/meetings.php">
           <img class="arrow" src="../images/Arrow-left.png" />
         </a>
         <div class="line"></div>

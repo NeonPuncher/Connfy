@@ -2,17 +2,17 @@
 session_start();
 require('conn.php');
 $id = isset($_GET['id']) ? $_GET['id'] : '';
-echo $id;
+// echo $id;
     // If the values are posted, insert them into the database.
 if(isset($_POST['OpslaanEdit'])){
 
-  
+     $tekst = $_POST['tekst'];
     $image = $_FILES['image'] ['name'];
     $folder = "afb/";
     move_uploaded_file($_FILES['image']["tmp_name"], "$folder".$image);
     $target = "afb/".basename($image);
         
-    $sql = "INSERT INTO `notes` (image) VALUES ('$image')";
+    $sql = "INSERT INTO `notes` (tekst, image) VALUES ('$tekst', '$image')";
 
     if (mysqli_query($conn, $sql)) {
         $id2 = mysqli_insert_id($conn);
@@ -22,7 +22,7 @@ if(isset($_POST['OpslaanEdit'])){
         $result2 = mysqli_query($conn, $sql2);
         
         echo '<script type="text/javascript">
-        window.location = "meetings.php?id='.$id.'"
+        window.location = "folder.php?id='.$id.'"
          </script>';
     }
     else{
@@ -66,7 +66,7 @@ if(isset($_POST['OpslaanEdit'])){
         <textarea
           class="note"
           id="note"
-          name="note"
+          name="tekst"
           rows="18"
           cols="45"
         ></textarea>

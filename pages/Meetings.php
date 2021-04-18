@@ -28,8 +28,11 @@ session_start();
   </head>
 
   <body>
-    <div class="header">
+  <div class="header">
       <header>
+        <a href="/pages/meetings.php">
+          <img class="arrow" src="../images/Arrow-left.png" />
+        </a>
         <div class="line"></div>
       </header>
     </div>

@@ -23,7 +23,7 @@ session_start();
             $result2 = mysqli_query($conn, $sql2);
             
             echo '<script type="text/javascript">
-            window.location = "meetings.php?id='.$id.'"
+            window.location = "whiteboard.php?id='.$id.'"
              </script>';
         }
         else{

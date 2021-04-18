@@ -1,7 +1,5 @@
 const cacheName="Main_Page";
 const appFiles=[
-"/",
-
 "/manifest.json",
 "/js/script.js",
 "/css/stylesheet.css",

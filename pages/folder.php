@@ -35,13 +35,13 @@ session_start();
 
       <?php
 
-          $sql="SELECT tekst, image FROM notes";
+          $sql="SELECT * FROM notes";
           $result=mysqli_query($conn, $sql);
           while($rows=mysqli_fetch_row($result))
           { 
 
-            echo "<a href='edit.php?id=".$rows[1]."'> <div class='textbox'>". $rows[4] ."</div></a>";
-            // echo "<a href='edit.php?id=".$row[1]."'> <div class='textbox'>". $rows[4] ."</div></a>";
+            echo "<a href='edit.php?id=".$rows[1]."'> <div class='textbox'>".$rows[1]."</div></a>";
+            // echo "<a href='edit.php?id=".$row[1]."'> <div class='textbox'>".$rows[3]."</div></a>";
           
           }
         
