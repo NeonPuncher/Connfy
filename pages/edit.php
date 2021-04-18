@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 require('conn.php');
 $id = isset($_GET['id']) ? $_GET['id'] : '';
@@ -6,14 +7,13 @@ $id = isset($_GET['id']) ? $_GET['id'] : '';
     // If the values are posted, insert them into the database.
 if(isset($_POST['OpslaanEdit'])){
 
-     $tekst = $_POST['tekst'];
-    $image = $_FILES['image'] ['name'];
-    $folder = "afb/";
-    move_uploaded_file($_FILES['image']["tmp_name"], "$folder".$image);
-    $target = "afb/".basename($image);
-        
-    $sql = "INSERT INTO `notes` (tekst, image) VALUES ('$tekst', '$image')";
+  $naam = $_POST["tekst"];
+  $image = $_FILES['image']["name"];
+      $folder = "afb/";
+      move_uploaded_file($_FILES['image']["tmp_name"], "$folder".$image);
+  $target = "afb/".basename($image);
 
+      $sql = "UPDATE `notes` SET tekst='$text', image='$image' WHERE noteid='$id'";
     if (mysqli_query($conn, $sql)) {
         $id2 = mysqli_insert_id($conn);
         $_SESSION['noteid'] = $id2;
