@@ -3,7 +3,7 @@ session_start();
     require('conn.php');
 
         // If the values are posted, insert them into the database.
-	if(isset($_POST['submit'])){
+	if(isset($_POST['VerderMeeting'])){
         $naam = $_POST['naam'];
         $aantal = $_POST['aantal'];
         $lengte = $_POST['lengte'];
@@ -78,9 +78,9 @@ session_start();
 
         <input
           class="input"
-          type="text"
+          type="number"
           name="lengte"
-          placeholder="Verwachtte tijd"
+          placeholder="Verwachtte tijd in minuten"
         />
         <br />
 

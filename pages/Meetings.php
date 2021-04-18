@@ -1,6 +1,12 @@
 <?php
 session_start();
     require('conn.php');
+
+    // if(isset("NieuweMeeting")){
+    //   echo '<script type="text/javascript">
+    //         window.location = "new_meeting.php"
+    //          </script>';
+    // }
     
 ?>
 
@@ -17,6 +23,8 @@ session_start();
     <title>Connfy PWA</title>
 
     <link rel="stylesheet" href="../css/stylesheet.css" type="text/css" />
+
+
   </head>
 
   <body>
@@ -30,32 +38,29 @@ session_start();
     </div>
 
     <div class="content">
-      <div class="block" id="block"></div>
-                  <table id="connfy">
-                  <tr><th>ID</th><th>naam</th><th>aantal</th><th>lengte</th><th>route</th></tr>
+      <div class="block" id="block">
+                  <!-- <table id="connfy">
+                  <tr><th>ID</th><th>naam</th><th>aantal</th><th>lengte</th><th>route</th></tr> -->
                   
                   <?php
 
               $sql="SELECT * FROM meeting";
               $result=mysqli_query($conn, $sql);
-              while($row=mysqli_fetch_row($result))
-              {
-                echo '<tr>';
-                echo '<td>'. $row[0] . '</td>';
-                echo '<td>'. $row[1] . '</td>';
-                echo '<td>'. $row[2] . '</td>';	
-                    echo '<td>'. $row[3] . '</td>';	
-                    echo '<td>'. $row[4] . '</td>';	
-                    echo '<td><a href="lijst.php?id='.$row[0].'"><button class="button_style1">bijwerken</button></a></td>';
-                    echo '</tr>';
+              while($rows=mysqli_fetch_row($result))
+              { 
+
+                echo "<a href='whiteboard.php'> <div class='textbox'>". $rows[1] ."</div></a>";
+
+               
               }
                  
 
                 ?>
-                </table>
+                </div>
+                <!-- </table> -->
       <input
-        onclick="createNote()"
-        href="#"
+        onclick="location.href = 'new_meeting.php';"
+        href="new_meeting.php"
         class="submit"
         style="width: auto"
         type="submit"
@@ -68,3 +73,28 @@ session_start();
     <script src="../js/script.js" type="text/javascript"></script>
   </body>
 </html>
+
+
+ <!-- echo "<script>
+
+            
+//                   let newDiv = document.createElement('div');
+//                   newDiv.className = 'textbox';
+//                   newDiv.setAttribute('onclick', 'toPage()');
+                 
+                
+//                   let titel = document.createElement('h2');
+//                   let titelText = document.createTextNode(
+//                     ". $row[1] . " + aantalMeetings
+//                   );
+//                   titel.appendChild(titelText);
+//                   newDiv.appendChild(titel);
+            
+//                   let block = document.getElementById('block');
+//                   block.appendChild(newDiv);
+//                 }
+            
+//                 function toPage() {
+//                   location.href='https://www.google.com/';
+//                 }
+//               </script>"; -->

@@ -1,3 +1,9 @@
+<?php
+session_start();
+    require('conn.php');
+
+    ?>
+
 <!DOCTYPE html>
 <html style="background-color: #e5e5e5">
   <head>
@@ -25,7 +31,28 @@
 
     <div class="content">
       <div class="block" id="block">
-        <script>
+
+
+      <?php
+
+          $sql="SELECT tekst, image FROM notes";
+          $result=mysqli_query($conn, $sql);
+          while($rows=mysqli_fetch_row($result))
+          { 
+
+            echo "<a href='edit.php?id=".$rows[1]."'> <div class='textbox'>". $rows[4] ."</div></a>";
+            // echo "<a href='edit.php?id=".$row[1]."'> <div class='textbox'>". $rows[4] ."</div></a>";
+          
+          }
+        
+
+        ?>
+
+
+
+
+
+        <!-- <script>
           let aantalNotities = 0;
           function createNote() {
             aantalNotities++;
@@ -55,21 +82,20 @@
           function consolelog() {
             console.log("HIJ GEEFT IETS MEE");
           }
-        </script>
+        </script> -->
       </div>
 
       <input
-        onclick="createNote()"
-        href="#"
+        onclick="location.href = 'record.php';"
+        href="record.php"
         class="submit"
         style="width: auto"
         type="submit"
         value="Nieuwe Notitie"
         name="NieuweNotitie"
-        required
       />
     </div>
-
+    </div>
     <script src="../js/script.js" type="text/javascript"></script>
   </body>
 </html>

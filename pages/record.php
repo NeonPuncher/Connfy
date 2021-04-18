@@ -2,7 +2,7 @@
 session_start();
     require('conn.php');
     $id = isset($_GET['id']) ? $_GET['id'] : '';
-    echo $id;
+    // echo $id;
         // If the values are posted, insert them into the database.
 	if(isset($_POST['Opslaan'])){
 
@@ -23,7 +23,7 @@ session_start();
             $result2 = mysqli_query($conn, $sql2);
             
             echo '<script type="text/javascript">
-            window.location = "meetingl.php?id='.$id.'"
+            window.location = "meetings.php?id='.$id.'"
              </script>';
         }
         else{
@@ -70,7 +70,7 @@ session_start();
         <textarea
           class="note"
           id="note"
-          name="note"
+          name="tekst"
           rows="18"
           cols="45"
         ></textarea>
