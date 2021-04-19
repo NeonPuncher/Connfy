@@ -30,7 +30,7 @@ session_start();
   <body>
   <div class="header">
       <header>
-        <a href="/pages/meetings.php">
+        <a href="whiteboard.php">
           <img class="arrow" src="../images/Arrow-left.png" />
         </a>
         <div class="line"></div>

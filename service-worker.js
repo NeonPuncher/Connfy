@@ -1,5 +1,15 @@
 const cacheName="Main_Page";
 const appFiles=[
+
+  "/index.php",
+  "/pages/edit.php",
+  "/pages/email.php",
+  "/pages/folder.php",
+  "/pages/Meetings.php",
+  "/pages/record.php",
+  "/pages/vergeten.php",
+  "/pages/whiteboard.php",
+
 "/manifest.json",
 "/js/script.js",
 "/css/stylesheet.css",
