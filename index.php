@@ -87,10 +87,7 @@ else{
         />
         <br />
 
-
-      </form>
-      <br />
-      <input
+        <input
           onclick="window.location.href = '/pages/meetings.php';"
           class="submit"
           type="submit"
@@ -98,6 +95,9 @@ else{
           name="loginknop"
         />
         <br />
+      </form>
+      <br />
+
 <input
 onclick="location.href = '/pages/vergeten.php';"
   class="submit"
