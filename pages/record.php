@@ -74,7 +74,7 @@ session_start();
           rows="18"
           cols="45"
         ></textarea>
-        <img src="/images/mic-on.svg" alt="Microphone" id="micDisplay" />
+        <img style="margin-bottom: 2rem;" src="/images/mic-on.svg" alt="Microphone" id="micDisplay" />
         <!-- <input
           class="submit"
           type="submit"
